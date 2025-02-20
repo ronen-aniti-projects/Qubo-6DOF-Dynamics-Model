@@ -52,16 +52,17 @@ I indicate that Qubo has six degrees of freedom—three translational and three 
 
 
 $$
-\mathbf{DoF} = \lbrace x, y, z,\, \phi, \theta, \psi \rbrace.
+\mathbf{DoF} = \lbrace x, y, z, \phi, \theta, \psi \rbrace.
 $$
 
 ## Defining the State Vector
 I define Qubo's state vector as
 
 $$
+
 \begin{equation}
-    \begin{aligned}
-    \mathbf{s} = \begin{bmatrix}
+    \mathbf{s} = 
+    \begin{bmatrix}
     \mathbf{x} \\
     \mathbf{\Theta} \\
     \mathbf{v} \\
@@ -74,8 +75,8 @@ $$
     \dot{x} \\ \dot{y} \\ \dot{z} \\
     p \\ q \\ r
     \end{bmatrix}
-    \end{aligned}
 \end{equation}
+
 $$
 
 where $\mathbf{x}$ represents the linear position, $\mathbf{\Theta}$ the Euler angles, $\mathbf{v}$ the linear velocity, and $\mathbf{\omega}$ the body rates.
