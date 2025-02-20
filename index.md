@@ -1,3 +1,7 @@
+---
+layout: default
+title: "Towards a 6-DoF Dynamics Model for Qubo"
+---
 # Towards a 6-DoF Dynamics Model for Qubo
 
 ## Summary

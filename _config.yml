@@ -1,0 +1,6 @@
+title: "Modeling Qubo/'s Dynamics in 6-DoF"
+description: ""
+theme: minima  # or any other theme
+markdown: kramdown
+kramdown:
+  input: GFM
