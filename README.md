@@ -16,7 +16,7 @@ I define Qubo's body-fixed reference frame as $\{ \mathcal{B} \}$. This referenc
 I describe rotations between reference frames using rotation matrices, parameterized by Euler angles, and define the overall rotation from body-frame coordinates to world-frame coordinates as 
 
 $$
-\mathbf{R} = \mathbf{R}_x(\phi) \, \mathbf{R}_y(\theta) \, \mathbf{R}_z(\psi).
+\mathbf{R} = \mathbf{R}_x(\phi) \mathbf{R}_y(\theta) \mathbf{R}_z(\psi).
 $$
 
 with
@@ -51,7 +51,7 @@ Here, $\phi$, $\theta$, and $\psi$ denote rotations about the body-frame $x$, $y
 I indicate that Qubo has six degrees of freedom—three translational and three rotational—and write these as a set of independent coordinates:
 
 $$
-\mathbf{DoF} = \{ x,\, y,\, z,\, \phi,\, \theta,\, \psi \}.
+\mathbf{DoF} = { x, y, z, \phi, \theta, \psi }.
 $$
 
 
