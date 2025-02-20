@@ -50,8 +50,9 @@ Here, $\phi$, $\theta$, and $\psi$ denote rotations about the body-frame $x$, $y
 ## Defining the Degrees of Freedom
 I indicate that Qubo has six degrees of freedom—three translational and three rotational—and write these as a set of independent coordinates:
 
+
 $$
-\mathbf{DoF} = \{ x, y, z, \phi, \theta, \psi \}.
+\mathbf{DoF} = \lbrace x,\, y,\, z,\, \phi,\, \theta,\, \psi \rbrace.
 $$
 
 
