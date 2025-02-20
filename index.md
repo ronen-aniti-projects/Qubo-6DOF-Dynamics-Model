@@ -7,7 +7,8 @@ title: "Towards a 6-DoF Dynamics Model for Qubo"
 ## Summary
 
 ## Picture of Qubo in the Water 
-![Qubo in Water](Qubo_In_Water.jpg)
+<img src="Qubo_In_Water.jpg" alt="Qubo in Water" width="300px" />
+
 
 ## Defining Frames of Reference
 ### Defining the World Frame of Reference 
