@@ -96,7 +96,7 @@ $$
 \mathbf{r}_b = \mathbf{r}_{\text{CoB}} - \mathbf{r}_{\text{CoM}},
 $$
 
-where $\mathbf{r}_{CoM}$ and $\mathbf{r}_{CoB}$ denote the coordinates of Qubo's center of mass and center of buoyancy, respectively.
+where $\mathbf{r}_{\mathrm{CoM}}$ and $\mathbf{r}_{\mathrm{CoB}}$ denote the coordinates of Qubo's center of mass and center of buoyancy, respectively.
 
 ## Modeling the External Forces and Moments
 
