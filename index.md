@@ -275,7 +275,7 @@ I will verify the functionality of the simulation by testing various control inp
 ### Progress So Far
 This week is the week of 2/24/25. I am just starting to implement this model in MATLAB. So far, I have contructed a script to symbolically derive the state equations. I am making this script available for viewing on the GitHub repository associated with this document. In the coming week, I will implement the `advanceState` function.
 
-* <a href="Qubo_Math_Model.m">View Symbolic Derivation MATLAB Script</a>
+* <a href="https://github.com/ronen-aniti-projects/Qubo-6DOF-Dynamics-Model/blob/main/Qubo_Math_Model.m">View Symbolic Derivation MATLAB Script</a>
 
 ## Insights from the Process
 <h3>Design Points: On the Mechanical Design Considerations for the Qubo Underwater Robot</h3>
