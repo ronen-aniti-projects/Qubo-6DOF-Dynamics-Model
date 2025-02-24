@@ -2,7 +2,8 @@
 layout: default
 title: "Towards a 6-DoF Dynamics Model for Qubo"
 ---
-# Towards a 6-DoF Dynamics Model for Qubo
+# Towards a 6-DoF Dynamics Model for Qubo 
+Author: Ronen Aniti, Contributor to Robotics at Maryland's Qubo (Underwater Robot) Mechanical Subteam
 
 ## Picture of Qubo in the Water 
 <img src="Qubo_In_Water.jpg" alt="Qubo in Water" width="600px" />
