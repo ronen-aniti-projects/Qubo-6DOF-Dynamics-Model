@@ -4,8 +4,6 @@ title: "Towards a 6-DoF Dynamics Model for Qubo"
 ---
 # Towards a 6-DoF Dynamics Model for Qubo
 
-## Summary
-
 ## Picture of Qubo in the Water 
 <img src="Qubo_In_Water.jpg" alt="Qubo in Water" width="600px" />
 
