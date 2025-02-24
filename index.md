@@ -203,7 +203,6 @@ where $F_b$ is the magnitude of the buoyancy force. The buoyancy force acts in t
 
 
 ## Formulating the Rigid-Body Dynamics
-
 ### Formulating the Translational Rigid-Body Dynamics
 I formulate the linear dynamics by employing Newton's second law:
 
