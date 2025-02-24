@@ -87,7 +87,26 @@ $$
 where $\mathbf{x}$ represents the linear position, $\mathbf{\Theta}$ the Euler angles, $\mathbf{v}$ the linear velocity, and $\mathbf{\omega}$ the body rates.
 
 ## Defining the Relationship Between Body Rates and Euler Rates 
-I establish that the transformation between 
+I establish that the transformation, $\mathbf{T}(\mathbf{\Theta})$,  between Euler rates and body rates as the following:
+
+$$ 
+\begin{bmatrix}
+\dot{\phi} \\
+\dot{\theta} \\
+\dot{\psi}
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & \sin\phi\,\tan\theta & \cos\phi\,\tan\theta \\
+0 & \cos\phi            & -\sin\phi \\
+0 & \frac{\sin\phi}{\cos\theta} & \frac{\cos\phi}{\cos\theta}
+\end{bmatrix}
+\begin{bmatrix}
+p \\
+q \\
+r
+\end{bmatrix}.
+$$
 
 ## Modeling the Displacement from the Center of Mass (CoM) to the Center of Buoyancy (CoB)
 I model the displacement vector from Qubo's center of mass (CoM) to its center of buoyancy (CoB) as
@@ -234,10 +253,29 @@ $$
 $$
 
 ## MATLAB Simulation
+
+This week, the week of 2/24/25, I am working to implement this math model in a MATLAB code file. The following is the plan for my implementation.
+
 ### Defining the Desired Simulation Output
+
+The simulation must advance the state of Qubo's dynamics forward by one time step.
+
 ### Defining the Simulation Input Parameters
-### Implementing the State Equations as a Function 
+
+The simulation must accept as input numeric values for each of Qubo's state variables and must also accept as input numeric values for Qubo's control inputs, namely thrust values. The simulation must allow the user to input values for Qubo's inertia elements, Qubo's center of mass (CoM) position and Qubo's center of buoyancy (CoB) position. 
+
+### Implementing the State Equations as a Function
+
+I will implement the state equations as a single MATLAB function, i.e. `advanceState`, which will accept as input Qubo's mass, inertia matrix, center of mass (CoM), center of Buoyancy (CoB), as well as its full state and control vectors. The function will, from these inputs, advance Qubo's state forward in time by some approximately infinitesimal amount of time, i.e. `dt` seconds, meaning it will output numeric values for the updated state vector. I will employ Euler integration to achieve this advancing of the state forward in time. 
+
 ### Verifying The Functionality of the Simulation
+
+I will verify the functionality of the simulation by testing various control input and parameter combinations to ensure Qubo's time response is as expected. For example, I will configure Qubo's CoB to be above Qubo's CoM and ensure Qubo is able to level itself when I remove the hydrodynamic drag effects.
+
+### Progress So Far
+This week is the week of 2/24/25. I am just starting to implement this model in MATLAB. So far, I have contructed a script to symbolically derive the state equations. I am making this script available for viewing on the GitHub repository associated with this document. In the coming week, I will implement the `advanceState` function.
+
+* <a href="Qubo_Math_Model.m">View Symbolic Derivation MATLAB Script</a>
 
 ## Insights from the Process
 <h3>Design Points: On the Mechanical Design Considerations for the Qubo Underwater Robot</h3>
