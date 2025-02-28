@@ -195,10 +195,10 @@ $$
 and
 
 $$
-\mathbf{M}_b = \mathbf{r}_b \times \mathbf{F}_b = \mathbf{r}_b \times \left( F_b \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \right),
+\mathbf{M}_b = \mathbf{r}_b \times \left( \mathbf{R}^T \, F_b \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \right)
 $$
 
-where $F_b$ is the magnitude of the buoyancy force. The buoyancy force acts in the positive $z$ world-frame direction and is applied at Qubo's center of buoyancy (CoB); the resulting moment is computed about Qubo's center of mass (CoM).
+where $F_b$ is the magnitude of the buoyancy force. The buoyancy force acts in the positive $z$ world-frame direction and is applied at Qubo's center of buoyancy (CoB); the resulting moment is computed about Qubo's center of mass (CoM) and is expressed in the body frame.
 
 
 
@@ -221,7 +221,7 @@ $$
 I formulate the rotational dynamics by employing Euler's equation for rigid-body motion. Since Euler's equation is formulated in the body frame, the buoyancy moment must be rotated into the body frame using the transpose of the rotation matrix:
 
 $$
-\mathbf{R}^T \mathbf{M}_b + \mathbf{M}_u + \mathbf{M}_d = \mathbf{I}\,\dot{\mathbf{\omega}} + \mathbf{\omega} \times \left( \mathbf{I}\,\mathbf{\omega} \right),
+\mathbf{M}_b + \mathbf{M}_u + \mathbf{M}_d = \mathbf{I}\,\dot{\mathbf{\omega}} + \mathbf{\omega} \times \left( \mathbf{I}\,\mathbf{\omega} \right)
 $$
 
 with $\mathbf{I}$ being the inertia matrix and $\dot{\mathbf{\omega}}$ representing the body-frame angular acceleration.
@@ -230,7 +230,7 @@ with $\mathbf{I}$ being the inertia matrix and $\dot{\mathbf{\omega}}$ represent
 Solving for the body-frame angular accelerations, I obtain
 
 $$
-\dot{\mathbf{\omega}} = \mathbf{I}^{-1}\left( \mathbf{R}^T \mathbf{M}_b + \mathbf{M}_u + \mathbf{M}_d - \mathbf{\omega} \times \left( \mathbf{I}\,\mathbf{\omega} \right) \right).
+\dot{\mathbf{\omega}} = \mathbf{I}^{-1}\left( \mathbf{M}_b + \mathbf{M}_u + \mathbf{M}_d - \mathbf{\omega} \times \left( \mathbf{I}\,\mathbf{\omega} \right) \right).
 $$
 
 ## Assembling the State-Space Model 
@@ -247,7 +247,7 @@ $$
 \mathbf{v} \\
 \mathbf{T}(\mathbf{\Theta})\,\mathbf{\omega} \\
 \frac{1}{m}\left( \mathbf{u} + \mathbf{F}_g + \mathbf{F}_b + \mathbf{F}_d \right) \\
-\mathbf{I}^{-1}\left( \mathbf{R}^T \mathbf{M}_b + \mathbf{M}_u + \mathbf{M}_{\text{reaction}} +\mathbf{M}_d - \mathbf{\omega} \times \left( \mathbf{I}\,\mathbf{\omega} \right) \right)
+\mathbf{I}^{-1}\left(  \mathbf{M}_b + \mathbf{M}_u + \mathbf{M}_{\text{reaction}} +\mathbf{M}_d - \mathbf{\omega} \times \left( \mathbf{I}\,\mathbf{\omega} \right) \right)
 \end{bmatrix}.
 $$
 
